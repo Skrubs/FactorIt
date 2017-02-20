@@ -71,16 +71,13 @@ public class DisplayScreen {
 			DataStorage.factoredList.clear();
 			factoredNumber.setText(textField.getText());
 			Factor.factor(Long.parseLong(textField.getText()));
+			textField.clear();
 			String numbers = "";
 			for(long i : DataStorage.factoredList){
 				factoredNumbers.setText(numbers = numbers + i + " ");
-				
-				
 			}
 			root.getChildren().add(factoredNumbers);
-			textField.clear();
-			
-			
+					
 		});
 		
 		textField = new TextField();
